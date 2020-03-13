@@ -20,6 +20,7 @@ var shapes = [];
 var colors = [ '#BB38A5', '#99258A', '#3D2245', '#FD2071', '#49648B', '#383B6A', '#FCFADB' ];
 
 /* Background Music */
+
 var soundBassBg = new Howl({
 	src: [ '/sounds/MikeOst-SynthwavePack/Loops/Music_Loops/LSC_100_Bass_Loop_02_Cm.wav' ],
 	loop: true
@@ -57,42 +58,47 @@ var soundLeadHighBpmBg3 = new Howl({
 
 /* Player Sounds */
 soundDict = [];
-soundDict['1'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_01.wav';
-soundDict['2'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_02.wav';
-soundDict['3'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_03.wav';
-soundDict['4'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_04.wav';
-soundDict.q = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_01.wav';
-soundDict.w = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_02.wav';
-soundDict.e = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_03.wav';
-soundDict.r = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_04.wav';
-soundDict.a = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_05.wav';
-soundDict.s = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_06.wav';
-soundDict.d = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_07.wav';
-soundDict.f = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_08.wav';
-soundDict.z = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_09.wav';
-soundDict.x = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_10.wav';
-soundDict.c = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_03.wav';
-soundDict.v = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_02.wav';
-soundDict.space = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_01.wav';
 
-/* Touch Mappings */
-soundDict['area2'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_01.wav';
-soundDict['area3'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_02.wav';
-soundDict['area4'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_03.wav';
-soundDict['area5'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_04.wav';
-soundDict['area6'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_01.wav';
-soundDict['area7'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_02.wav';
-soundDict['area8'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_03.wav';
-soundDict['area9'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_04.wav';
-soundDict['area10'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_05.wav';
-soundDict['area11'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_06.wav';
-soundDict['area12'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_07.wav';
-soundDict['area13'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_08.wav';
-soundDict['area14'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_09.wav';
-soundDict['area15'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_10.wav';
-soundDict['area16'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_03.wav';
-soundDict['area17'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_02.wav';
-soundDict['area18'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_01.wav';
+setSoundDictionary();
+
+function setSoundDictionary() {
+	soundDict['1'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_01.wav';
+	soundDict['2'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_02.wav';
+	soundDict['3'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_03.wav';
+	soundDict['4'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_04.wav';
+	soundDict.q = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_01.wav';
+	soundDict.w = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_02.wav';
+	soundDict.e = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_03.wav';
+	soundDict.r = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_04.wav';
+	soundDict.a = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_05.wav';
+	soundDict.s = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_06.wav';
+	soundDict.d = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_07.wav';
+	soundDict.f = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_08.wav';
+	soundDict.z = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_09.wav';
+	soundDict.x = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_10.wav';
+	soundDict.c = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_03.wav';
+	soundDict.v = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_02.wav';
+	soundDict.space = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_01.wav';
+
+	/* Touch Mappings */
+	soundDict['area2'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_01.wav';
+	soundDict['area3'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_02.wav';
+	soundDict['area4'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_03.wav';
+	soundDict['area5'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Snares/LSC_Snare_04.wav';
+	soundDict['area6'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_01.wav';
+	soundDict['area7'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_02.wav';
+	soundDict['area8'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_03.wav';
+	soundDict['area9'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_04.wav';
+	soundDict['area10'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_05.wav';
+	soundDict['area11'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_06.wav';
+	soundDict['area12'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_07.wav';
+	soundDict['area13'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_08.wav';
+	soundDict['area14'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_09.wav';
+	soundDict['area15'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Percussions/LSC_Perc_10.wav';
+	soundDict['area16'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_03.wav';
+	soundDict['area17'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_02.wav';
+	soundDict['area18'] = '/sounds/MikeOst-SynthwavePack/One-Shots/Kicks/LSC_Kick_01.wav';
+}
 
 /* Methods --------------------------------------------------------------------- */
 function playSound(soundToPlay) {
@@ -170,6 +176,12 @@ function onFrame(event) {
 	for (var i = 0; i < shapes.length; i++) {
 		shapes[i].fillColor.hue += 1;
 		shapes[i].scale(0.9);
+	}
+
+	if (circles[i].area < 1) {
+		circles[i].remove();
+		circles.splice(i, 1);
+		console.log(circles);
 	}
 }
 
