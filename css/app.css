@@ -1,0 +1,48 @@
+:root {
+	--bg: black;
+}
+
+body {
+	background-image: url('/img/66media-tumblr-outrun.gif');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+	width: 100%;
+}
+
+#instructions {
+	color: white;
+	text-align: center;
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 95%;
+}
+
+#canvas {
+	height: 100%;
+	width: 100%;
+}
+
+.fluid-container {
+	text-align: center;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 0.65em;
+	grid-auto-rows: minmax(100%, 100%);
+}
+
+.area {
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+}
